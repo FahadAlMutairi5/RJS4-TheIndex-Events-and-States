@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
 class AuthorCard extends Component {
-  render() {
-    const author = this.props.author;
-    const authorName = `${author.first_name} ${author.last_name}`
-    return (
-      <div className="col-lg-4 col-md-6 col-12">
+    render() {
+        const author = this.props.author;
+        const authorName = `${author.first_name} ${author.last_name}`;
+        return (
+            <div className="col-lg-4 col-md-6 col-12">
         <div className="card">
           <div className="image">
             <img
@@ -20,10 +20,11 @@ class AuthorCard extends Component {
             </h5>
             <small className="card-text">{author.books.length} books</small>
           </div>
+          <button type="button" className="btn btn-block mb-3 btn-secondary" onClick={() => this.props.selectAuthor(author)}> Detail {authorName} </button>
         </div>
       </div>
-    );
-  }
+        );
+    }
 }
 
 export default AuthorCard;
