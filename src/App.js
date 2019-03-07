@@ -16,7 +16,7 @@ class App extends Component {
     filterAuthors = query => { 
       let filterL = [];
       authors.filter(author => {
-        if(author.first_name.includes(query)){
+        if(author.first_name.toLowerCase().includes(query.toLowerCase())){
           filterL.push(author);
         }
         return true;
